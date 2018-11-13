@@ -1,0 +1,22 @@
+language: c
+addons:
+    apt:
+        config:
+            retries: true
+        packages:
+            - valgrind
+matrix:
+    include:
+        - os: linux
+          compiler: gcc
+          dist: trusty
+script:
+    - |
+        set -eo pipefail
+        make
+branches:
+    only:
+        - master
+
+notifications:
+  email: false
