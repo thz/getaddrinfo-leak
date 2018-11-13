@@ -10,6 +10,9 @@ matrix:
         - os: linux
           compiler: gcc
           dist: trusty
+        - os: linux
+          compiler: gcc
+          dist: xenial
 script:
     - |
         set -eo pipefail
